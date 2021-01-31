@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='page'>
-        <table>
+        <table className= "table">
           <thead>
             <tr>
               <th>Flight#</th>
