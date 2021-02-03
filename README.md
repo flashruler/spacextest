@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Spxtrackr is a SpaceX launch and information tracker currently in development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
