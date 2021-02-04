@@ -10,8 +10,10 @@
   justify-content: left;
 }
 .launch{
- max-width: 1000px;
-  background-repeat: no-repeat;
+  width:100%; 
+ /* max-width: 1000px; */
+  /* background-repeat: no-repeat; */
+  background: #51585e;
   background-size: cover;
   background-position: center;
   color: white;

@@ -62,7 +62,7 @@ class App extends React.Component {
             let date = new Date(value.date_local)
             return (
               <div className='box' key={index} >
-                <div className='launch' onClick={() => this.handleClick(index)} style={divStyle}>
+                <div className='launch' onClick={() => this.handleClick(index)} >
                   <h1>{value.name}</h1>
                 </div>
                 {this.state.showInfo === index &&
