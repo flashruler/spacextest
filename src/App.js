@@ -12,23 +12,23 @@ class App extends React.Component {
     super(props)
     this.getData = this.getData.bind(this)
     this.handleClick = this.handleClick.bind(this)
-    this.getBooster = this.getBooster(this)
+    // this.getBooster = this.getBooster(this)
   }
   componentDidMount() {
     this.getData()
   }
-  getBooster(core)
-  {
-    console.log(core)
-    axios.get('https://api.spacexdata.com/v4/cores/'+core)
-      .then(function (response) {
-        return response.data.serial
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-  }
+  // getBooster(core)
+  // {
+  //   console.log(core)
+  //   axios.get('https://api.spacexdata.com/v4/cores/'+core)
+  //     .then(function (response) {
+  //       return response.data.serial
+  //     })
+  //     .catch(function (error) {
+  //       // handle error
+  //       console.log(error);
+  //     })
+  // }
   getData() {
     let that = this
     axios.get('https://api.spacexdata.com/v4/launches/upcoming')
@@ -67,7 +67,7 @@ class App extends React.Component {
                     <h3>Flight No. : {value.flight_number}</h3>
                     <h3>Date: {value.date_local}</h3>
                     {/* <h2>Booster No. : {()=>this.getBooster(value.cores[0].core)}</h2> */}
-                    {console.log(value.cores[0].core)}
+                    {/* {console.log(value.cores[0].core)} */}
                   </div>} 
               </div>
             )
