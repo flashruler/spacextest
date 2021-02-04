@@ -35,17 +35,17 @@ class App extends React.Component {
       .then(function (response) {
         console.log(response.data);
         that.setState({ launches: response.data })
-        
+
       })
       .catch(function (error) {
         // handle error
         console.log(error);
       })
   }
-  handleClick(index){
-    if(index===this.state.showInfo)
-    index=-1
-    this.setState(state=>({showInfo: index}))
+  handleClick(index) {
+    if (index === this.state.showInfo)
+      index = -1
+    this.setState(state => ({ showInfo: index }))
   }
   render() {
     return (
@@ -53,11 +53,11 @@ class App extends React.Component {
       <div className='page'>
 
         {this.state.launches && this.state.launches.map((value, index) => {
-          if (index<2) {
+          if (index < 2) {
             const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
             return (
               <div className='box' key={index} >
-                <div className='launch' onClick= {()=>this.handleClick(index)} style={divStyle}>
+                <div className='launch' onClick={() => this.handleClick(index)} style={divStyle}>
                   <h1>{value.name}</h1>
                   <p className='paragraph'>{value.details}</p>
                 </div>
@@ -68,11 +68,13 @@ class App extends React.Component {
                     <h3>Date: {value.date_local}</h3>
                     {/* <h2>Booster No. : {()=>this.getBooster(value.cores[0].core)}</h2> */}
                     {/* {console.log(value.cores[0].core)} */}
-                  </div>} 
+                  </div>}
               </div>
             )
           }
-
+          else {
+            return (<div key={index} ></div>)
+          }
         })}
 
       </div>
