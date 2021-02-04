@@ -60,11 +60,6 @@ class App extends React.Component {
           if (index < 2) {
             const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
             let date = new Date(value.date_local)
-            let day = date.getDay()
-            let month = date.getUTCMonth()
-            let year = date.getUTCFullYear()
-            let hour = date.getUTCHours()
-            let min = date.getUTCMinutes()
             return (
               <div className='box' key={index} >
                 <div className='launch' onClick={() => this.handleClick(index)} style={divStyle}>
