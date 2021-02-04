@@ -58,7 +58,7 @@ class App extends React.Component {
         </div>
         {this.state.launches && this.state.launches.map((value, index) => {
           if (index < 2) {
-            const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
+            // const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
             let date = new Date(value.date_local)
             return (
               <div className='box' key={index} >
