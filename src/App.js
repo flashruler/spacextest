@@ -51,21 +51,31 @@ class App extends React.Component {
     return (
 
       <div className='page'>
-
+        <div className='headerParent'>
+          <div className='header'>
+            <h1>SpaceX Tracker</h1>
+          </div>
+        </div>
         {this.state.launches && this.state.launches.map((value, index) => {
           if (index < 2) {
             const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
+            let date = new Date(value.date_local)
+            let day = date.getDay()
+            let month = date.getUTCMonth()
+            let year = date.getUTCFullYear()
+            let hour = date.getUTCHours()
+            let min = date.getUTCMinutes()
             return (
               <div className='box' key={index} >
                 <div className='launch' onClick={() => this.handleClick(index)} style={divStyle}>
                   <h1>{value.name}</h1>
-                  <p className='paragraph'>{value.details}</p>
                 </div>
                 {this.state.showInfo === index &&
                   <div className='info'>
                     <h1> Launch Info</h1>
+                    <p className='paragraph'>{value.details}</p>
                     <h3>Flight No. : {value.flight_number}</h3>
-                    <h3>Date: {value.date_local}</h3>
+                    <h3>Date: {date.toString()}</h3>
                     {/* <h2>Booster No. : {()=>this.getBooster(value.cores[0].core)}</h2> */}
                     {/* {console.log(value.cores[0].core)} */}
                   </div>}
