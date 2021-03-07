@@ -57,7 +57,7 @@ class App extends React.Component {
           </div>
         </div>
         {this.state.launches && this.state.launches.map((value, index) => {
-          if (index < 2) {
+          if (index < 3) {
             // const divStyle = { backgroundImage: 'url(https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg)' }
             let date = new Date(value.date_local)
             return (
