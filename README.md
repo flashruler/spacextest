@@ -1,6 +1,6 @@
 # Spxtrackr is a SpaceX launch and information tracker currently in development (NO LONGER UPDATED)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This tracked SpaceX launches using an API.
 
 ## Available Scripts
 
